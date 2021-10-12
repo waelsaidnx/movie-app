@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import CreateCards from './component/MovieCard/CreateCards';
+import { useState } from 'react';
+import Movies from './Data';
+import FilterBar from './component/Filter/FilterBar';
+
 
 function App() {
+  
+  const [movies, setMovies] = useState(Movies);
+  const [searchRate, setSearchRate] = useState(0);
+  const [search, setSearch] = useState("")
+  
+  const addNewMovie = (x) => {
+    setMovies([...movies, x])
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <FilterBar
+        setSearch={setSearch}  
+        setSearchRate={setSearchRate}
+        searchRate = {searchRate} /> 
+     <CreateCards className="create" 
+     movies={Movies.filter(el => el.MovieTitle.toLowerCase().includes(search.toLowerCase().trim()) &&
+     el.Rating >= searchRate)} /> 
     </div>
   );
 }

@@ -1,0 +1,49 @@
+.Hbody{
+/* display: flex;
+flex-wrap: wrap;
+margin:auto; */
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+width: 100%;
+width: 84%;
+margin-top: 100px;
+margin-bottom: 100px;
+
+}
+.rating {
+    margin:5px ;
+    color: #FFD700;
+    font-size: 32px;
+  }
+.movieCard{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 10px;
+    /* max-width: 31%; */
+    border-radius: 5px;
+    text-align: left;
+}
+.movieCard:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .movieCard .img:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+.movieCard h2,p{
+    padding:0 20px;
+}
+.movieCard img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    height: 220px;
+    
+
+}
+.star{
+    color: gold;
+    font-size: 30px;
+    margin: 2px;
+}
+/* .test{
+    display: flex;
+    max-width: 100%;
+} */
