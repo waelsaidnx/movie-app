@@ -13,6 +13,33 @@ body, html{
   pointer-events: none;
 }
 
+.detailsContainer{
+  width: 50%;
+  margin: 100px auto 100px auto;
+  border: solid;
+  padding-bottom:10px;
+  border-radius: 10px;
+  border-color:gray;
+}
+.detailsImage{
+  margin: 0px;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px ;
+}
+.detailsContainer h2{
+  color: rgb(107, 103, 103);
+}
+.links{
+  text-decoration: none;
+  color: #282c34;
+}
+.detailsContainer p{
+  color: rgb(107, 103, 103);
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

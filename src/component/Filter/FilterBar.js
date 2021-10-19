@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
-import Rate from '../Rate'
+import Rate from '../Rate';
+import { Link } from 'react-router-dom';
 
 function FilterBar( { setSearch, setSearchRate, searchRate } ) {
 
@@ -8,7 +9,9 @@ function FilterBar( { setSearch, setSearchRate, searchRate } ) {
         <div>
         <nav>
             <div className="logo">
+                <Link to="/">
             <img className="logo" src="/logo.png"  alt="" />
+                </Link>
              </div>
              <div className="box">
             <form name="search">
